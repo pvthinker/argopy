@@ -1,0 +1,62 @@
+#!/bin/csh
+#PBS -q mpi_2
+#PBS -l select=2:ncpus=28:mpiprocs=28:mem=60g
+#PBS -l walltime=00:30:00
+#PBS -N argodb
+#PBS -j oe
+##PBS -V 
+##PBS -r y
+
+source /usr/share/Modules/3.2.10/init/csh
+#source $HOME/.cshrc
+# your $HOME/.bashrc should have
+#source /usr/share/Modules/3.2.10/init/bash
+#source $HOME/.bashrc
+# module load anaconda-py2.7
+
+module load anaconda-py3.6/4.3.13 
+#module load  intel-fc-16/16.0.4.258 
+#module load  ncview/2.1.7__gcc-6.3.0
+#module load  mpt/2.15              
+#module load impi/2017.2.174
+#module load  NETCDF/4.3.3.1-mpt-intel2016
+
+module load mpt
+#module load vacumm
+
+# we add 'mpt' and 'vacumm' to have MPI
+#module load mpt
+#module load vacumm
+
+module list
+
+echo $SHELL
+setenv CONDA_ENVS_PATH /home1/datahome/groullet/.conda/envs
+pwd
+which ipython
+echo "doing source activate"
+source $HOME/activate.csh pyenv
+setenv PYTHONHASHSEED 42
+echo "virtualenv activated"
+which ipython
+
+# directory where the executable is
+cd /home1/datahome/groullet/dev/argopy
+pwd
+
+setenv mpiproc `cat $PBS_NODEFILE  | wc -l`
+
+echo ""
+echo "job running with  $mpiproc mpi process "
+
+echo ""
+echo "Launch MPI on:   " `date`
+rm -f mnslave.txt
+
+mpiexec -np $mpiproc python database.py
+
+
+echo ""
+echo "Finish MPI on:   " `date`
+echo ""
+
