@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this Atlas or software, please cite it as below."
+authors:
+- family-names: "Roullet"
+  given-names: "Guillaume"
+  orcid: "https://orcid.org/0000-0002-7482-864X"
+title: "argopy"
+url: "https://github.com/pvthinker/argopy"
+preferred-citation:
+  type: Dataset
+  authors:
+    - family-names: "Roullet"
+      given-names: "Guillaume"
+      orcid: "https://orcid.org/0000-0002-7482-864X"
+  doi: "10.17882/72432"
+  journal: ""
+  title: "World Ocean Atlas of Argo inferred statistics"
+  year: 2020
+  url: "https://www.seanoe.org/data/00612/72432/"
