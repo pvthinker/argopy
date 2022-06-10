@@ -5,10 +5,13 @@ The resulting atlas has been published on SEANOE here: [https://doi.org/10.17882
 
 ## How to cite ?
 
-Roullet Guillaume (2020). World Ocean Atlas of Argo inferred statistics. SEANOE. [https://doi.org/10.17882/72432](https://doi.org/10.17882/72432)
+**Roullet Guillaume (2020). World Ocean Atlas of Argo inferred statistics. SEANOE. [https://doi.org/10.17882/72432](https://doi.org/10.17882/72432)**
 
 In addition to properly cite this dataset, it would be appreciated that the following work(s) be cited too, when using this dataset in a publication :
 
 Roullet Guillaume, Capet Xavier, Maze Guillaume (2014). Global Interior Eddy Available Potential Energy Diagnosed from Argo Floats. Geophysical Research Letters, 41(5), 1651-1656. Publisher's official version :  [https://doi.org/10.1002/2013GL059004](https://doi.org/10.1002/2013GL059004) , Open Access version : [https://archimer.ifremer.fr/doc/00175/28579](https://archimer.ifremer.fr/doc/00175/28579/)
 
 ![ScreenShot](/images/compensated_density_1000m.png)
+
+**P.S.**
+This repository is not to be confused with the [Python library argopy](https://github.com/euroargodev/argopy) dedicated to Argo data access, visualisation and manipulation.
